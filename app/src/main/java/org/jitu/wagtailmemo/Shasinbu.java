@@ -9,7 +9,7 @@ import android.widget.EditText;
 
 import java.io.IOException;
 
-class Shasinbu extends Saver {
+class Shasinbu extends Bunkabu {
     Shasinbu(Activity arg) {
         super(arg);
     }

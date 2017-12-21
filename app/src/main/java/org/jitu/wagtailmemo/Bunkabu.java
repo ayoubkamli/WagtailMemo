@@ -4,10 +4,10 @@ import android.app.Activity;
 import android.widget.EditText;
 import android.widget.Toast;
 
-abstract class Saver {
+abstract class Bunkabu {
     Activity activity;
 
-    Saver(Activity arg) {
+    Bunkabu(Activity arg) {
         this.activity = arg;
     }
 

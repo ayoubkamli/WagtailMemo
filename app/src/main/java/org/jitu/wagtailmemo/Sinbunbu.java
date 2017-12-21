@@ -11,7 +11,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-class Sinbunbu extends Saver {
+class Sinbunbu extends Bunkabu {
     Sinbunbu(Activity arg) {
         super(arg);
     }
