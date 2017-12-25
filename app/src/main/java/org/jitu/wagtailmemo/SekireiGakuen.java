@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity {
+public class SekireiGakuen extends AppCompatActivity {
     private Sinbunbu sinbunbu = new Sinbunbu(this);
     private Shasinbu shasinbu = new Shasinbu(this);
 
