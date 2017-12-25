@@ -2,7 +2,6 @@ package org.jitu.wagtailmemo;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.EditText;
 
 public class SekireiGakuen extends AppCompatActivity {
@@ -26,6 +25,7 @@ public class SekireiGakuen extends AppCompatActivity {
     public void onPause() {
         super.onPause();
         saveEditText();
+        saveImage();
     }
 
     private void restoreEditText() {
@@ -36,13 +36,6 @@ public class SekireiGakuen extends AppCompatActivity {
     private void saveEditText() {
         EditText edit = findViewById(R.id.editText);
         sinbunbu.publish(edit);
-    }
-
-    public void onClickButtonOk(View view) {
-        View button = findViewById(R.id.button);
-        view.setVisibility(View.INVISIBLE);
-        saveImage();
-        view.setVisibility(View.VISIBLE);
     }
 
     private void saveImage() {

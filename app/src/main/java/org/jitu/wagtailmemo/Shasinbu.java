@@ -30,7 +30,6 @@ class Shasinbu extends Bunkabu {
         WallpaperManager mgr = (WallpaperManager) activity.getSystemService(Context.WALLPAPER_SERVICE);
         try {
             mgr.setBitmap(bitmap);
-            toastShort("Set Wallpaper");
         } catch (IOException e) {
             toast(e);
         }
