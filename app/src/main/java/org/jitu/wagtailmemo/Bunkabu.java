@@ -1,6 +1,7 @@
 package org.jitu.wagtailmemo;
 
 import android.app.Activity;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -27,5 +28,9 @@ abstract class Bunkabu {
 
     void toast(Throwable e) {
         toastLong(e.getMessage());
+    }
+
+    void log(Throwable e) {
+        Log.e(getClass().toString(), e.getMessage());
     }
 }

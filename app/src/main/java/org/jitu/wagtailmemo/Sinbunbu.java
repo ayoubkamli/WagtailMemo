@@ -3,7 +3,6 @@ package org.jitu.wagtailmemo;
 import android.app.Activity;
 import android.support.annotation.NonNull;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -35,12 +34,12 @@ class Sinbunbu extends Bunkabu {
         } catch (IOException e) {
             toast(e);
         } finally {
-            try {
-                if (out != null) {
+            if (out != null) {
+                try {
                     out.close();
+                } catch (IOException e) {
+                    log(e);
                 }
-            } catch (IOException e) {
-                e.printStackTrace();
             }
         }
     }
@@ -63,13 +62,14 @@ class Sinbunbu extends Bunkabu {
             }
             return buf.toString();
         } catch (IOException e) {
+            toast(e);
             return "";
         } finally {
             if (br != null) {
                 try {
                     br.close();
                 } catch (IOException e) {
-                    Toast.makeText(activity, e.getMessage(), Toast.LENGTH_LONG).show();
+                    log(e);
                 }
             }
         }
